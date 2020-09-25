@@ -1,0 +1,67 @@
+{%extends 'blog.html'%}
+{% load static %}
+
+{% block menu-outer %}
+    <div class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+		<div class="bar"></div>
+    </div>
+    <nav>
+        <ul>
+           <li><a href={{curl}}user/>Home</a></li>
+           <li><a href={{curl}}user/userblog/>Blog</a></li>
+           <li><a href={{curl}}user/shop/>Shop</a></li>
+		   <li><a href={{curl}}home/>Logout</a></li>
+       </ul>
+   </nav>
+{% endblock %}
+
+
+
+
+
+{%block pagearea%}
+
+<h1 class="page-headline">SHOP PAGE</h1>
+<i class="iconstartitle textmagenta fa fa-star"></i>
+
+<h1 class="entry-title">SUBMIT YOUR DETAILS</h1>
+			
+<font color="orange" style="height:20px;">{{output}}</font>
+<form method='POST' action={{curl}}user/umget5/   >
+{% csrf_token %}
+<table cellspacing="10">
+<tr>
+<td>Name</td>
+<td>
+<input type="text" name="name" placeholder="Enter name" required/>
+</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>
+<input type="text" name="email" placeholder="Enter email" required/>
+</td>
+</tr>
+<tr>
+<td>Mobile</td>
+<td>
+<input type="text" name="mobile" placeholder="Enter Your Active Whatsapp Number" required/>
+</td>
+</tr>
+<tr>
+<td>
+<input type="submit"  value="Submit"/> 
+</td>
+</tr>
+</table>
+</form>
+
+
+
+	
+
+
+{%endblock%}

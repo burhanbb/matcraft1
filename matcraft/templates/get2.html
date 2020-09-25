@@ -1,0 +1,13 @@
+{%extends 'blog.html'%}
+{% load static %}
+{%block pagearea%}
+
+<div class="card1">
+  <img src="{% static 'images/bg11.jpg'%}" alt="Denim Jeans" style="width:100%">
+  <h1>{{title}}</h1>
+  <p class="price1">{{price}}</p>
+  <p>{{description}}</p>
+  <p><button>SHOP</button></p>
+</div>
+
+{%endblock%}

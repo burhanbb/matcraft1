@@ -1,0 +1,67 @@
+{% extends 'blog.html'%}
+
+{% block menu-outer %}
+    <div class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+		
+    </div>
+    <nav>
+        <ul>
+           <li><a href={{curl}}myadmin/>Home</a></li>
+            <li><a href={{curl}}myadmin/editinfo/>Edit User Info</a></li>
+           <li><a href={{curl}}myadmin/addpro/>Add Product</a></li>
+		   <li><a href={{curl}}myadmin/editpro/>Edit Product</a></li>
+           <li><a href={{curl}}home/>Logout</a></li>
+       </ul>
+   </nav>
+{% endblock %}
+
+{% block pagearea%}
+
+<h1 class="page-headline">EDIT PRODUCT DETAILS</h1>
+<i class="iconstartitle textmagenta fa fa-star"></i>
+
+<p>Select What You Want To Change?
+<form method="POST" action={{curl}}myadmin/editpro/   >
+{% csrf_token %}
+<font color="orange" style="height:20px;">{{output}}</font>
+<p></p>
+<select name='pid'>
+<option disabled="True" selected>Select pid:</option>
+{% for b in splist %}
+
+    <option >{{b.0}}</option>
+  
+{% endfor %}
+</select>
+<p></p>
+<table cellspacing="10">
+<p></p>
+<select name='drop'>
+    <option disabled="True" selected>Select:</option>
+    <option >Title</option>
+    <option >Price</option>
+    <option >Description</option>
+  
+</select>
+<p></p>
+<td>New Entry</td>
+<td>
+<input type="entry" name="entry" placeholder="New Entry"/>
+</td>
+</tr>
+<p></p>
+<tr>
+<td>
+<input type="submit"  value="EDIT"/> 
+</td>
+</tr>
+</table>
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,41 @@
+from django.contrib import admin
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.userhome),
+    path('userblog/', views.userblog),
+    path('shop/', views.shop),
+    path('home/',views.home),
+    path('uget1/',views.uget1),
+    path('uget2/',views.uget2),
+    path('uget3/',views.uget3),
+    path('uget4/',views.uget4),
+    path('uget5/',views.uget5),
+    path('uget6/',views.uget6),
+    path('uget7/',views.uget7),
+    path('uget8/',views.uget8),
+    path('uget9/',views.uget9),
+    path('uget10/',views.uget10),
+    path('uget11/',views.uget11),
+    path('uget12/',views.uget12),
+    path('uget13/',views.uget13),
+    path('uget14/',views.uget14),
+    path('uget15/',views.uget15),
+    path('umget1/',views.umget1),
+    path('umget2/',views.umget2),
+    path('umget3/',views.umget3),
+    path('umget4/',views.umget4),
+    path('umget5/',views.umget5),
+    path('umget6/',views.umget6),
+    path('umget7/',views.umget7),
+    path('umget8/',views.umget8),
+    path('umget9/',views.umget9),
+    path('umget10/',views.umget10),
+    path('umget11/',views.umget11),
+    path('umget12/',views.umget12),
+    path('umget13/',views.umget13),
+    path('umget14/',views.umget14),
+    path('umget15/',views.umget15),
+
+    ]

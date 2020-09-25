@@ -1,0 +1,79 @@
+{% extends 'blog.html' %}
+
+{% block pagearea %}
+
+<h1 class="page-headline">REGISTER PAGE</h1>
+<i class="iconstartitle textmagenta fa fa-star"></i>
+
+<h1 class="entry-title">REGISTRATION</h1>
+			
+<font color="orange" style="height:20px;">{{output}}</font>
+<form method='POST' action={{curl}}register/   >
+{% csrf_token %}
+<table cellspacing="10">
+<tr>
+<td>Name</td>
+<td>
+<input type="text" name="name" placeholder="Enter name" required/>
+</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>
+<input type="text" name="email" placeholder="Enter email" required/>
+</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>
+<input type="password" name="password" placeholder="Enter password" required/>
+</td>
+</tr>
+<tr>
+<td>Address</td>
+<td>
+<textarea cols="31" rows="5" name="address" placeholder="Enter address" required></textarea>
+</td>
+</tr>
+<tr>
+<td>Mobile</td>
+<td>
+<input type="text" name="mobile" placeholder="Enter mobile" required/>
+</td>
+</tr>
+<tr>
+<tr>
+<td>City</td>
+<td>
+<select style="width:250px;" name="city"  required>
+<option>Select city</option>
+<optgroup label="Madhya Pradesh">
+<option>Indore</option>
+<option>Bhopal</option>
+<option>Ujjain</option>
+</optgroup>
+<optgroup label="Maharastra">
+<option>Mumbai</option>
+<option>Pune</option>
+<option>Nasik</option>
+</optgroup>
+</select>
+</td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>
+<input type="radio" name="gender" value="male"/> Male
+&nbsp;&nbsp;
+<input type="radio" name="gender" value="female"/> Female
+</td>
+</tr>
+<tr>
+<td>
+<input type="submit"  value="Register"/> 
+</td>
+</tr>
+</table>
+</form>
+
+{% endblock %}

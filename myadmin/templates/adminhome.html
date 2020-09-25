@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block menu-outer %}
+    <div class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+		
+    </div>
+    <nav>
+        <ul>
+           <li><a href={{curl}}myadmin/>Home</a></li>
+            <li><a href={{curl}}myadmin/editinfo/>Edit User Info</a></li>
+           <li><a href={{curl}}myadmin/addpro/>Add Product</a></li>
+		   <li><a href={{curl}}myadmin/editpro/>Edit Product</a></li>
+           <li><a href={{curl}}home/>Logout</a></li>
+       </ul>
+   </nav>
+{% endblock %}

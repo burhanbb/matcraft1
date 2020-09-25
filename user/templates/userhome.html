@@ -1,0 +1,18 @@
+{% extends  'base.html' %}
+
+{% block menu-outer %}
+    <div class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+		<div class="bar"></div>
+    </div>
+    <nav>
+        <ul>
+           <li><a href={{curl}}user/>Home</a></li>
+           <li><a href={{curl}}user/userblog/>Blog</a></li>
+           <li><a href={{curl}}user/shop/>Shop</a></li>
+		   <li><a href={{curl}}home/>Logout</a></li>
+       </ul>
+   </nav>
+{% endblock %}

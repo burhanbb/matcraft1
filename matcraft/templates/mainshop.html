@@ -1,0 +1,22 @@
+{% extends 'blog.html' %}
+{%load static%}
+
+{%block background%}
+<body style="background-image:url({% static 'images/bg16.jpg' %});background-attachment:fixed;background-size:cover;">
+
+{%endblock%}
+{% block pagearea %}
+
+<h1 class="page-headline">OUR PRODUCTS</h1>
+<i class="iconstartitle textmagenta fa fa-star"></i>
+{% for m in splist%}
+
+    <div class="card">
+  
+  <h1>{{m.1}}</h1>
+  <p class="price">{{m.3}}</p>
+  <p><a class="fullpricelist" href={{curl}}get{{m.0}}/>Details</a></p>
+  <p></p>
+</div>
+{% endfor %}
+{% endblock %}

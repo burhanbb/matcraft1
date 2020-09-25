@@ -1,0 +1,40 @@
+{% extends 'blog.html' %}
+{% load static %}
+
+{% block menu-outer %}
+    <div class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+		<div class="bar"></div>
+    </div>
+    <nav>
+        <ul>
+           <li><a href={{curl}}user/>Home</a></li>
+           <li><a href={{curl}}user/userblog/>Blog</a></li>
+           <li><a href={{curl}}user/shop/>Shop</a></li>
+		   <li><a href={{curl}}home/>Logout</a></li>
+       </ul>
+   </nav>
+{% endblock %}
+{% block pagearea %}
+
+<h1 class="page-headline">OUR PRODUCTS Welcome {{em}}</h1>
+<i class="iconstartitle textmagenta fa fa-star"></i>
+
+
+{% for p in sclist %}
+ <div class="card">
+  
+  <h1>{{p.1}}</h1>
+  <p class="price">{{p.3}}</p>
+  <p><a href={{curl}}user/uget{{p.0}}/ class="button">Details</a></p>
+  <p></p>
+</div>
+
+{% endfor %}
+
+{% endblock %}
+
+
+
